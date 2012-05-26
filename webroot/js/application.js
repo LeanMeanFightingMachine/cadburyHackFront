@@ -5,10 +5,18 @@ var App = {
     Collection: {},
     Instances: {},
     init: function() {
+	    
+			this.Instances.listView = new ListView();
+			this.Instances.bumpView = new BumpView();
+			
+			var appContext = this;
+
+			window.ondevicemotion = function(event){
+				appContext.Instances.bumpView.detectBump(event)
+			}
+
+		}
     	
-    console.log("hello");
-    
-     var listView = new ListView();
     	
 /*
     	var coordinateCollection = new Backbone.Collection();
@@ -58,5 +66,4 @@ var App = {
     }
 */
 
-	}
 };
