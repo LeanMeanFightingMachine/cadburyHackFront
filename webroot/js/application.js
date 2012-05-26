@@ -6,13 +6,13 @@ var App = {
     Instances: {},
     init: function() {
 	    
-			this.Instances.listView = new ListView();
 			this.Instances.bumpView = new BumpView();
 			
 			var appContext = this;
 
 			window.ondevicemotion = function(event){
-				appContext.Instances.bumpView.detectBump(event)
+		/* 	window.onmousemove = function(event){ */
+				appContext.Instances.bumpView.detectBump(event.acceleration)
 			}
 
 		}
