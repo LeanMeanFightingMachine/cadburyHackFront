@@ -23,7 +23,7 @@ var BumpView = Backbone.View.extend({
 				
 				if (this.spikeZCount > 9) {
 					
-					$.post('http://192.168.145.208/api/index/', {'method': 'triggerBump', 'uuid': 2, 'type': 'ANDROID', 'latitude': this.model.get('latitude'), 'longitude': this.model.('longitude')})
+					$.post('http://192.168.145.208/api/index/', {'method': 'triggerBump', 'uuid': 2, 'type': 'ANDROID', 'latitude': this.model.get('lat'), 'longitude': this.model.get('long')}, function(){});
 
  					this.spikeZCount = 0;
 		} else {
@@ -31,7 +31,7 @@ var BumpView = Backbone.View.extend({
 		}
 		} else {
 			this.spikeZCount++;
-	}
+		}
 
   },
 
