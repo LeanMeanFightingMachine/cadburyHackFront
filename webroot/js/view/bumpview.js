@@ -17,19 +17,21 @@ var BumpView = Backbone.View.extend({
 
 		var accelZ = 0;
 
-    accelZ = Math.abs(acceleration.z - ( (acceleration.z * this.kFilteringFactor) + (accelZ * (1.0 - this.kFilteringFactor)) ) );
-  	
-    if (accelZ > 3) {
- 				$(this.el).prepend($('<div>').text("high acc, accelZ :" + accelZ + "spikeZCount : " + this.spikeZCount));
-        if (this.spikeZCount > 9) {
-            $(this.el).prepend($('<div>').text("HIT--, spikeZCount : " + this.spikeZCount));
- 						this.spikeZCount = 0;
-        } else {
-            this.spikeZCount++;
-        }
-    } else {
-        this.spikeZCount++;
-    }
+		accelZ = Math.abs(acceleration.z - ( (acceleration.z * this.kFilteringFactor) + (accelZ * (1.0 - this.kFilteringFactor)) ) );
+
+		if (accelZ > 3) {
+				
+				if (this.spikeZCount > 9) {
+					
+					$.post('http://192.168.145.208/api/index/', {'method': 'triggerBump', 'uuid': 2, 'type': 'ANDROID', 'latitude': this.model.get('latitude'), 'longitude': this.model.('longitude')})
+
+ 					this.spikeZCount = 0;
+		} else {
+ 			this.spikeZCount++;
+		}
+		} else {
+			this.spikeZCount++;
+	}
 
   },
 
