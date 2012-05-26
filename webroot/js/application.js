@@ -5,17 +5,27 @@ var App = {
     Collection: {},
     Instances: {},
     init: function() {
+    	_.bindAll(this);
 	    
 			this.Instances.bumpView = new BumpView();
 			
+			this.Model.location = new Location();
+			
 			var appContext = this;
-
 			window.ondevicemotion = function(event){
-		/* 	window.onmousemove = function(event){ */
-				appContext.Instances.bumpView.detectBump(event.acceleration)
+				appContext.Instances.bumpView.detectBump(event.acceleration);
 			}
+		
+			navigator.geolocation.watchPosition(appContext.setLocation, appContext.handleError);
+		  
+		},
+		
+		setLocation: function(event) {
+				console.log("event.coords.longitude : " + event.coords.longitude+"  this.Model="+this.Model); 
+		    this.Model.location.set('long', event.coords.longitude);
+				this.Model.location.set('lat', event.coords.latitude);
 
-		}
+  	}
     	
     	
 /*
