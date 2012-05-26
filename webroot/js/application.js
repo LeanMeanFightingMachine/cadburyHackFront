@@ -21,7 +21,6 @@ var App = {
 		},
 		
 		setLocation: function(event) {
-				console.log("event.coords.longitude : " + event.coords.longitude+"  this.Model="+this.Model); 
 		    this.Model.location.set('long', event.coords.longitude);
 				this.Model.location.set('lat', event.coords.latitude);
 
