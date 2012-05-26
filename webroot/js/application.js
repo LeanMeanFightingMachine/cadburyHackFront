@@ -7,9 +7,11 @@ var App = {
     init: function() {
     	_.bindAll(this);
 	    
-			this.Instances.bumpView = new BumpView();
+			
 			
 			this.Model.location = new Location();
+			
+			this.Instances.bumpView = new BumpView({model: this.Model.location});
 			
 			var appContext = this;
 			window.ondevicemotion = function(event){
@@ -21,6 +23,7 @@ var App = {
 		},
 		
 		setLocation: function(event) {
+
 				var longMoved = this.Model.location.get('long') - event.coords.longitude;
 				var latMoved = this.Model.location.get('lat') - event.coords.latitude;
 		
