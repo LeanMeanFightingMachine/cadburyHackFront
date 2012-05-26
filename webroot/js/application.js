@@ -21,8 +21,15 @@ var App = {
 		},
 		
 		setLocation: function(event) {
+				var longMoved = this.Model.location.get('long') - event.coords.longitude;
+				var latMoved = this.Model.location.get('lat') - event.coords.latitude;
+		
 		    this.Model.location.set('long', event.coords.longitude);
 				this.Model.location.set('lat', event.coords.latitude);
+				
+				$("body").prepend($('<p>').text("LOC long : " + event.coords.longitude + ",  lat : " + event.coords.latitude ));
+				
+				$("body").prepend($('<p>').text("LOC longMoved : " + longMoved + ",  latMoved : " + latMoved ));
 
   	}
     	
