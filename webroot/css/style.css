@@ -84,4 +84,10 @@ nav div{margin: 15px 20px 0 20px;}
 .leaderFooter{background: url('../img/leaderboardFooter.png') no-repeat 0 0; height: 177px; background-size: 280px;}
 
 
+.show{
+	visibility: visible;
+}
 
+.hide{
+	visibility: hidden;
+}
