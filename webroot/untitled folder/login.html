@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Cadbury Torch Thing</title>
+		<meta name="viewport" content="initial-scale=1.0">
+		<meta name="viewport" content="maximum-scale=1.0">
+		<meta name="viewport" content="user-scalable=no">
+		<meta name="viewport" content="width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	</head>
+	<body class="login">
+		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+		<header>
+			<h1>Title</h1>
+			<h3>Login to start your torch race</h3>
+		</header>
+
+		<section>
+			<div class="torch"></div>
+			<div id="twitterLogin">Twitter Login</div>
+		</section>
+		<div id="push"></div>
+		<footer>
+			<nav>
+				<div class="yourTorch">Your Torch</div>
+				<div class="instructions">Instructions</div>
+				<div class="refuel">Refuel</div>
+				<div class="leaderboard">Leaderboard</div>
+			</nav>
+		</footer>
+
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		<script type="text/javascript" src="/js/lib/underscore-min.js"></script>
+		<script type="text/javascript" src="/js/lib/backbone-min.js"></script>
+		<script type="text/javascript" src="/js/application.js"></script>
+
+		<script type="text/javascript" src="/js/model/item.js"></script>
+		<script type="text/javascript" src="/js/collection/list.js"></script>
+		<script type="text/javascript" src="/js/view/itemview.js"></script>
+		<script type="text/javascript" src="/js/view/listview.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				App.init();
+			});
+		</script>
+	</body>
+</html>
