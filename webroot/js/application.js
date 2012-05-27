@@ -30,9 +30,8 @@ var App = {
 		    this.Model.location.set('long', event.coords.longitude);
 				this.Model.location.set('lat', event.coords.latitude);
 				
-				$("body").prepend($('<p>').text("LOC long : " + event.coords.longitude + ",  lat : " + event.coords.latitude ));
-				
-				$("body").prepend($('<p>').text("LOC longMoved : " + longMoved + ",  latMoved : " + latMoved ));
+				//$("body").prepend($('<p>').text("LOC long : " + event.coords.longitude + ",  lat : " + event.coords.latitude ));		
+				//$("body").prepend($('<p>').text("LOC longMoved : " + longMoved + ",  latMoved : " + latMoved ));
 
   	}
     	
