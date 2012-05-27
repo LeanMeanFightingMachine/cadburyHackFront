@@ -5,10 +5,37 @@ var App = {
     Collection: {},
     Instances: {},
     init: function() {
+    	_.bindAll(this);
+	    
+			
+			
+			this.Model.location = new Location();
+			
+			this.Instances.bumpView = new BumpView({model: this.Model.location});
+			
+			var appContext = this;
+			window.ondevicemotion = function(event){
+				appContext.Instances.bumpView.detectBump(event.acceleration);
+			}
+		
+			navigator.geolocation.watchPosition(appContext.setLocation, appContext.handleError);
+		  
+		},
+		
+		setLocation: function(event) {
+
+				var longMoved = this.Model.location.get('long') - event.coords.longitude;
+				var latMoved = this.Model.location.get('lat') - event.coords.latitude;
+		
+		    this.Model.location.set('long', event.coords.longitude);
+				this.Model.location.set('lat', event.coords.latitude);
+				
+				$("body").prepend($('<p>').text("LOC long : " + event.coords.longitude + ",  lat : " + event.coords.latitude ));
+				
+				$("body").prepend($('<p>').text("LOC longMoved : " + longMoved + ",  latMoved : " + latMoved ));
+
+  	}
     	
-    console.log("hello");
-    
-     var listView = new ListView();
     	
 /*
     	var coordinateCollection = new Backbone.Collection();
@@ -58,5 +85,4 @@ var App = {
     }
 */
 
-	}
 };
