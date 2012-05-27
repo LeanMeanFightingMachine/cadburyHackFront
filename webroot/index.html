@@ -9,9 +9,34 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	</head>
-	<body>
+	<body class="home">
 		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+		<div id = "wrap">
+			<header>
+				<h1>Team @username</h1>
+				<div id="logOut">Log Out</a>
+			</header>
+
+			<section>
+				<div class="mileage">Distance:</div>
+				<div class="chain">Torchbearers:</div>
+				<div class="rank">Position:</div>
+				<div class="torch"></div>
+			</section>
+			<div id="push"></div>
+		</div>    
+		<footer>
+			<nav>
+				<div class="yourTorch">Your Torch</div>
+				<div class="instructions">Instructions</div>
+				<div class="refuel">Refuel</div>
+				<div class="leaderboard">Leaderboard</div>
+			</nav>
+		</footer>
+
+
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 		<script type="text/javascript" src="/js/lib/underscore-min.js"></script>
 		<script type="text/javascript" src="/js/lib/backbone-min.js"></script>
 		<script type="text/javascript" src="/js/application.js"></script>
