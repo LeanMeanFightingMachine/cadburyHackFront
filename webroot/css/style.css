@@ -93,7 +93,8 @@ nav div{margin: 15px 20px 0 20px;}
 .leaderHeader{background: url('../img/leaderboardHEader.png') no-repeat 0 0; height: 52px; background-size: 280px;}
 .leaderContent{background: url('../img/leaderboadTop10.png') repeat-y 0 0; height: 500px; background-size: 280px;}
 .leaderFooter{background: url('../img/leaderboardFooter.png') no-repeat 0 0; height: 177px; background-size: 280px;}
-
+.top100 .instruct p{text-align: center;}
+.instruct p img{width: 90%;}
 
 .show{
 	visibility: visible;
