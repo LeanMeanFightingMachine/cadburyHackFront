@@ -37,7 +37,7 @@ swatch colours:
 
 /* Layout */
 html, body{width: 100%; height: 100%; height: auto !important;}
-body{background: url('../img/cadburyStripeBackground.jpg') 0 0; font-family: 'JOYVILLEMediumRegular'; color: #fff; margin: 0;}
+body, .ui-content, .ui-header{background: url('../img/cadburyStripeBackground.jpg') 0 0; font-family: 'JOYVILLEMediumRegular'; color: #fff; margin: 0;}
 header, section, footer, #push, #wrap{width: 100%; float: left; clear: both; margin: 0 auto;}
 header{text-align: center;}
 #wrap{min-height: 100%; height: 100%;}
@@ -47,36 +47,47 @@ footer{background: #482684; margin: -4em auto 0 auto; height: 4em; position: fix
 nav{height: 100%; width: 290px; margin: 0 auto; }
 
 h1, h2{font-family: 'JOYVILLERegular'; text-transform: uppercase; color: #fff;}
-h1{font-size: 24px;}
+h1{font-size: 24px !important;}
 h2{font-size: 20px;}
 h3{font-size: 18px;}
 a{text-decoration: none; color: #fff;}
 
 /* header */
 #logOut{background: url('../img/logOut.png') no-repeat 0 0; width: 30px; height: 30px; text-indent: -1999px; position: absolute; right: 10px; top: 10px;}
-
+.ui-title{margin: 20px auto !important;}
 /* Section */
-.torch{height: 350px;}
-#twitterLogin{background: url('../img/twitter-sprite.jpg') no-repeat 0 0; width: 193px; height: 42px; text-indent: -1999px; margin: 0 auto;}
-#twitterLogin:hover{background-position: -193px 0;}
-#twitterLogin:active{background-position: -386px 0;}
+#torch{background: none;height: 256px; width: 100%; background: #000;}
+.torch{height: 256px; position: absolute; left: 50%; margin:0 0 0 -128px;}
+.ui-content{height: 480px; padding: 0;}
 
 /* Footer */
 nav div:first{margin: 10px 40px 0 10px;}
 nav div{margin: 15px 20px 0 20px;}
-.yourTorch, .instructions, .refuel, .leaderboard{width: 32px; height: 39px; text-indent: -1999px; float: left;}
+.ui-bar{text-align: center; padding: .4em 0 !important;}
+.ui-bar a:first{margin: 0 20px 0 0;}
+.ui-bar a{margin: 0 20px !important;}
+.yourTorch, .instructions, .refuel, .leaderboard{width: 32px; height: 39px; text-indent: -1999px;}
 .yourTorch{background: url('../img/yourtorch.png') no-repeat 0 0;}
 .instructions{background: url('../img/instructionsicon.png') no-repeat 0 0;}
 .refuel{background: url('../img/refuelicon.png') no-repeat 0 0;}
 .leaderboard{background: url('../img/topleader.png') no-repeat 0 0;}
 
 /* ============= Login ============== */
+.userLogin .ui-content{height:370px;}
+#twitterLogin{background: url('../img/twitter-sprite.jpg') no-repeat 0 0; width: 193px; height: 42px; text-indent: -1999px; margin: 20px auto 0;}
+#twitterLogin:hover{background-position: -193px 0;}
+#twitterLogin:active{background-position: -386px 0;}
 
 /* ============= Home ============== */
 .home .yourTorch{opacity: 0.5;}
+.stats{margin: 20px auto; width: 320px; text-align: center;}
+.key{float: left; text-align: right; width: 155px;}
+.data{float: left; text-align: left; margin: 0 0 0 20px; width: 145px;}
 
 /* ============= Instructions ============== */
-.instruct .instructions{opacity: 0.5;}
+.instruction .ui-content{ height: 500px;}
+.instruct{background: url('../img/copybackground.png') no-repeat 0 0; background-size: 100% 100%; height: 300px; padding: 100px 0;}
+.instruct p{width: 75%; margin: 0 auto; color: #482684; font-size: 12px;}
 /* ============= Top 10 ============== */
 .top10 .leaderboard{opacity: 0.5;}
 .leaderHeader{background: url('../img/leaderboardHEader.png') no-repeat 0 0; height: 52px; background-size: 280px;}
