@@ -78,9 +78,10 @@ nav div{margin: 15px 20px 0 20px;}
 /* ============= Instructions ============== */
 .instruct .instructions{opacity: 0.5;}
 /* ============= Top 10 ============== */
-.leaderHeader{background: url('../img/leaderboardHEader.png') no-repeat 0 0; height: 101px; background-size: 360px;}
-.leaderContent{}
-.leaderFooter{}
+.top10 .leaderboard{opacity: 0.5;}
+.leaderHeader{background: url('../img/leaderboardHEader.png') no-repeat 0 0; height: 52px; background-size: 280px;}
+.leaderContent{background: url('../img/leaderboadTop10.png') repeat-y 0 0; height: 500px; background-size: 280px;}
+.leaderFooter{background: url('../img/leaderboardFooter.png') no-repeat 0 0; height: 177px; background-size: 280px;}
 
 
 
